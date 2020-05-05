@@ -1,0 +1,12 @@
+{
+  "author": "leonkou",
+  "classifications": [ "Web","WebApi" ],
+  "name": "fast construct api by netpro",
+  "identity": "LeonKou.NetPro.Api",
+  "shortName": "netproapi",
+  "tags": {
+    "language": "C#" 
+  },
+  "sourceName": "Company.Module", 
+  "preferNameDirectory": "true"
+}

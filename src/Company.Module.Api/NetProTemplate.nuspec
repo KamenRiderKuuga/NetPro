@@ -1,0 +1,23 @@
+<package>
+  <metadata>
+    <id>LeonKou.NetPro.Api</id>
+    <version>1.0</version>
+    <authors>Leon</authors>
+    <description>fast construct api by netpro</description>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file src=".template.config/template.json" target="content/.template.config" />
+    <file src="Company.Module.Api.csproj" target="content/" />
+    <file src="Program.cs" target="content/" />
+    <file src="Startup.cs" target="content/" />
+    <file src="TestService.cs" target="content/" />
+    <file src="ITestService.cs" target="content/" />
+    <file src="Controllers/*" target="content/Controllers" />
+    <file src="appsettings.json" target="content/" />
+    <file src="appsettings.Development.json" target="content/" />         
+    <file src="Properties/*" target="content/Properties/" />
+  </files>
+</package>
