@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -18,11 +17,14 @@ namespace Test.Demo.Api.Controllers
 
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        private readonly ITestService _testService;
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, ITestService testService)
         {
             _logger = logger;
+            _testService = testService;
         }
 
+        [Route("Get")]
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -34,6 +36,17 @@ namespace Test.Demo.Api.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        /// <summary>
+        /// this GetName
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("GetName")]
+        public string GetName()
+        {
+            return _testService.GetName();
         }
     }
 }
